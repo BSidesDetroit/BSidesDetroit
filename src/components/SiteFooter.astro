@@ -1,0 +1,29 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section>
+      <p class="terminal-label">$ whoami</p>
+      <p>BSides Detroit, an independent, volunteer-run InfoSec conference in Detroit, Michigan.</p>
+    </section>
+
+    <section>
+      <p class="terminal-label">$ cat contact.txt</p>
+      <ul>
+        <li><a href="/hello">Discord and contact</a></li>
+        <li><a href="/sponsor">Sponsor BSides Detroit</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="terminal-label">$ ls /legal</p>
+      <ul>
+        <li><a href="/code-of-conduct">Code of Conduct</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="copyright">© {year} BSides Detroit · built with Astro · hosted on GitHub Pages</p>
+</footer>

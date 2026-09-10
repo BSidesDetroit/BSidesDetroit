@@ -1,0 +1,47 @@
+---
+import HomeContent from "../../content/home.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import StatStrip from "../components/StatStrip.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="BSides Detroit"
+  description="BSides Detroit is back. Hack more. Help people. Secure all."
+>
+  <section class="home-hero">
+    <div class="hero-copy">
+      <p class="signal-line">&gt; holding pattern · Detroit, MI · next signal TBD</p>
+      <p class="kicker">// community security from the motor city</p>
+      <h1 class="sr-only">BSides Detroit</h1>
+      <p>BSides Detroit. Hack more. Help people. Secure all.</p>
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button primary" href="/hello">./hello</a>
+        <a class="button" href="/sponsor">./sponsor</a>
+        <a class="button" href="/past">cat /past</a>
+      </div>
+    </div>
+
+    <div class="logo-frame">
+      <img src="/assets/bsides-detroit.webp" alt="BSides Detroit logo" />
+    </div>
+  </section>
+
+  <div class="page-wrap">
+    <StatStrip />
+
+    <MarkdownPanel label="[ sector 01 // broadcast ]">
+      <HomeContent />
+    </MarkdownPanel>
+
+    <section class="mission-brief">
+      <p class="panel-label">$ ./mission-brief --city detroit</p>
+      <pre><code>launch_window = "2027_launch_window"
+ground_station = "Detroit, MI"
+ticket = "closed"
+cfp_status = "closed"
+volunteer_status = "closed for now"
+theme = "blue / yellow / black / glitch"</code></pre>
+    </section>
+  </div>
+</BaseLayout>

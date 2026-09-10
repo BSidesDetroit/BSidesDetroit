@@ -1,0 +1,41 @@
+---
+const navItems = [
+  { href: "/about", label: "ABOUT" },
+  { href: "/past", label: "PAST" },
+  { href: "/sponsor", label: "SPONSORS" },
+  { href: "/hello", label: "HELLO" },
+];
+---
+
+<header class="site-header">
+  <div class="terminal-boot" aria-label="site status">
+    <span>$ establishing detroit uplink...</span>
+    <span>$ signal acquired. welcome, operator.</span>
+  </div>
+
+  <div class="nav-shell">
+    <a class="brand" href="/" aria-label="BSides Detroit home">
+      <span class="prompt">[root@detroit]#</span>
+      <span>BSides Detroit</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {
+        navItems.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))
+      }
+    </nav>
+
+    <details class="mobile-nav">
+      <summary>menu</summary>
+      <nav aria-label="Mobile navigation">
+        {
+          navItems.map((item) => (
+            <a href={item.href}>{item.label}</a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>

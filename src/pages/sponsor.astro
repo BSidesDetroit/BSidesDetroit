@@ -1,0 +1,19 @@
+---
+import SponsorContent from "../../content/sponsor.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import PageHero from "../components/PageHero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Sponsor · BSides Detroit" description="Sponsor BSides Detroit and support the local security community.">
+  <div class="page-wrap">
+    <PageHero
+      eyebrow="./sponsor"
+      title="Sponsor BSides Detroit"
+      summary="Support the next BSides Detroit and help keep the event affordable, practical, and community-run."
+    />
+    <MarkdownPanel label="[ support // sponsor packet ]">
+      <SponsorContent />
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

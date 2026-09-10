@@ -1,0 +1,19 @@
+---
+import PastContent from "../../content/past.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import PageHero from "../components/PageHero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Past Events · BSides Detroit" description="Past BSides Detroit events, archives, and recap links.">
+  <div class="page-wrap">
+    <PageHero
+      eyebrow="ls /archive"
+      title="Past Events"
+      summary="Completed years, recap links, schedules, sponsors, and notes from previous BSides Detroit events."
+    />
+    <MarkdownPanel label="[ archive // previous signals ]">
+      <PastContent />
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

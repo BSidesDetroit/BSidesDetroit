@@ -1,0 +1,19 @@
+---
+const stats = [
+  { label: "status", value: "2026 successful" },
+  { label: "sector", value: "detroit" },
+  { label: "crew", value: "volunteer" },
+  { label: "next signal", value: "2027 tbd" },
+];
+---
+
+<dl class="stat-strip">
+  {
+    stats.map((stat) => (
+      <div>
+        <dt>{stat.label}</dt>
+        <dd>{stat.value}</dd>
+      </div>
+    ))
+  }
+</dl>

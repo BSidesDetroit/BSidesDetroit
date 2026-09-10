@@ -1,0 +1,23 @@
+{
+  "name": "bsides-detroit-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --host 0.0.0.0",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
+    "smoke": "node scripts/smoke-pages.mjs",
+    "smoke:dist": "node scripts/smoke-dist.mjs",
+    "smoke:docker": "node scripts/smoke-docker.mjs",
+    "test": "npm run build && npm run smoke:dist"
+  },
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "astro": "6.4.4"
+  }
+}

@@ -1,0 +1,19 @@
+---
+import AboutContent from "../../content/about.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import PageHero from "../components/PageHero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About · BSides Detroit" description="About BSides Detroit and the volunteer-run security community behind it.">
+  <div class="page-wrap">
+    <PageHero
+      eyebrow="cat /about"
+      title="About"
+      summary="Who we are, why BSides Detroit exists, and how the community keeps it moving."
+    />
+    <MarkdownPanel label="[ transmission // mission ]">
+      <AboutContent />
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

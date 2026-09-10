@@ -1,0 +1,19 @@
+---
+import ConductContent from "../../content/code-of-conduct.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import PageHero from "../components/PageHero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Code of Conduct · BSides Detroit" description="BSides Detroit code of conduct.">
+  <div class="page-wrap">
+    <PageHero
+      eyebrow="cat /legal/code-of-conduct"
+      title="Code of Conduct"
+      summary="A placeholder for the official attendee policy, reporting process, and enforcement notes."
+    />
+    <MarkdownPanel label="[ legal // conduct ]">
+      <ConductContent />
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

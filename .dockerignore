@@ -1,0 +1,11 @@
+.git
+.github
+.astro
+dist
+node_modules
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+README.md
+PLAN.md

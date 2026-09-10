@@ -1,0 +1,25 @@
+services:
+  site:
+    build:
+      context: .
+      target: runtime
+    image: bsides-detroit-site:local
+    ports:
+      - "${SITE_PORT:-4321}:4321"
+
+  dev:
+    image: node:26-bookworm-slim
+    profiles:
+      - dev
+    working_dir: /app
+    environment:
+      ASTRO_TELEMETRY_DISABLED: "1"
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: sh -lc "npm ci && npm run dev"
+
+volumes:
+  node_modules:

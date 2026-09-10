@@ -1,0 +1,21 @@
+---
+const target = "/hello";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Redirecting to Discord · BSides Detroit</title>
+    <script is:inline>
+      window.location.replace("/hello");
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/hello">Discord and contact</a>.</p>
+  </body>
+</html>

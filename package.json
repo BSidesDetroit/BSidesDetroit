@@ -18,6 +18,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "astro": "6.4.4"
+    "astro": "7.3.1"
   }
 }

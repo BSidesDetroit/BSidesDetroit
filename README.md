@@ -58,6 +58,21 @@ Production-like static build and preview:
 docker compose up --build
 ```
 
+If Docker reports that `npm ci` cannot find `@emnapi/core` or
+`@emnapi/runtime` in the lockfile, regenerate the lockfile in the same Linux
+Node 26 environment used by the image, then rebuild without cached layers:
+
+```bash
+docker run --rm \
+  -v "$PWD:/app" \
+  -w /app \
+  node:26-bookworm-slim \
+  npm install --package-lock-only --ignore-scripts --no-audit
+
+docker compose build --no-cache
+docker compose up
+```
+
 Open `http://localhost:4321`.
 
 Stop it:

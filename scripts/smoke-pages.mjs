@@ -24,7 +24,7 @@ export const pages = [
     path: "/past",
     expectedText: [
       "Past Events",
-      "The 2025 and 2026 events are complete",
+      "Explore the history of BSides Detroit through the details below",
     ],
   },
   {
@@ -35,17 +35,17 @@ export const pages = [
     ],
   },
   {
-    path: "/hello",
+    path: "/discord",
     expectedText: [
-      "Discord invite: TBD",
-      "You want to stay connected between events",
+      "Join Discord",
+      "discord.gg/VTxn4qWwdQ",
     ],
   },
   {
     path: "/code-of-conduct",
     expectedText: [
       "Code of Conduct",
-      "placeholder for the official BSides Detroit code of conduct",
+      "Community Citizenship",
     ],
   },
 ];

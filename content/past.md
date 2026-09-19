@@ -1,6 +1,8 @@
 BSides Detroit has been a cornerstone of the information security community in the Motor City since its inception in 2011. Born from the spirit of collaboration and knowledge sharing, this volunteer-driven event has consistently provided a platform for security professionals, researchers, and enthusiasts to connect, learn, and grow.
 
-Explore the history of BSides Detroit through the links below, reliving the memories and insights that have shaped this vibrant community.
+The 2025 and 2026 events are complete, and this page is the public archive for each year.
+
+Explore the history of BSides Detroit through the details below, reliving the memories and insights that have shaped this vibrant community.
 
 ## BSides Detroit 2026
 

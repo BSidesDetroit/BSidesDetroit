@@ -22,6 +22,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Configure deployment path
+        run: |
+          if [ -f public/CNAME ]; then
+            echo "PUBLIC_SITE_URL=https://$(tr -d '[:space:]' < public/CNAME)/" >> "$GITHUB_ENV"
+            echo "PUBLIC_SITE_BASE=/" >> "$GITHUB_ENV"
+          else
+            echo "PUBLIC_SITE_URL=https://bsidesdetroit.github.io/BSidesDetroit/" >> "$GITHUB_ENV"
+            echo "PUBLIC_SITE_BASE=/BSidesDetroit" >> "$GITHUB_ENV"
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v5
         with:

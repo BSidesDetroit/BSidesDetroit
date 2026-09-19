@@ -1,6 +1,7 @@
 ---
 import * as SitePage from "../../content/site.md";
 const navItems = SitePage.frontmatter.nav;
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
@@ -10,7 +11,7 @@ const navItems = SitePage.frontmatter.nav;
   </div>
 
   <div class="nav-shell">
-    <a class="brand" href="/" aria-label="BSides Detroit home">
+    <a class="brand" href={base} aria-label="BSides Detroit home">
       <span class="prompt">[root@detroit]#</span>
       <span>BSides Detroit</span>
     </a>
@@ -18,7 +19,7 @@ const navItems = SitePage.frontmatter.nav;
     <nav class="desktop-nav" aria-label="Primary navigation">
       {
         navItems.map((item) => (
-          <a href={item.href}>{item.label}</a>
+          <a href={`${base}${item.href.slice(1)}`}>{item.label}</a>
         ))
       }
     </nav>
@@ -28,7 +29,7 @@ const navItems = SitePage.frontmatter.nav;
       <nav aria-label="Mobile navigation">
         {
           navItems.map((item) => (
-            <a href={item.href}>{item.label}</a>
+            <a href={`${base}${item.href.slice(1)}`}>{item.label}</a>
           ))
         }
       </nav>

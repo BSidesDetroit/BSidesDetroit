@@ -10,6 +10,8 @@ export function getStaticPaths() {
 const { profile } = Astro.props;
 const { Content } = profile;
 const { name, role, image, pronouns, links } = profile.frontmatter;
+const base = import.meta.env.BASE_URL;
+const imageSrc = image?.startsWith("/") ? `${base}${image.slice(1)}` : image;
 ---
 
 <BaseLayout title={`${name} · BSides Detroit`} description={`Meet ${name}, a member of the BSides Detroit 2027 staff.`}>
@@ -17,12 +19,12 @@ const { name, role, image, pronouns, links } = profile.frontmatter;
     <PageHero eyebrow="cat /staff/2027" title={name} summary={role || "BSides Detroit 2027 staff"} />
     <MarkdownPanel label="[ profile // community operator ]">
       <div class="staff-profile">
-        {image && <img class="staff-profile-image" src={image} alt={`${name} portrait`} />}
+        {image && <img class="staff-profile-image" src={imageSrc} alt={`${name} portrait`} />}
         <div class="staff-profile-copy">
           {pronouns && <p class="staff-pronouns">({pronouns})</p>}
           <Content />
           <p class="staff-links">{links?.map((link) => <a href={link.url} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</p>
-          <p><a href="/staff/">← Back to staff directory</a></p>
+          <p><a href={`${base}staff/`}>← Back to staff directory</a></p>
         </div>
       </div>
     </MarkdownPanel>

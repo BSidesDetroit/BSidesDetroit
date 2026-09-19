@@ -30,7 +30,7 @@ BSides Detroit exists because we do real work in real systems, and we deserve a 
 
 ### Discord
 
-[Join the BSides Detroit community](/discord) for announcements, conversation, volunteering, speaker updates, and event planning.
+[Join the BSides Detroit community](../discord) for announcements, conversation, volunteering, speaker updates, and event planning.
 
 ### Contact
 
@@ -39,7 +39,7 @@ BSides Detroit exists because we do real work in real systems, and we deserve a 
 
 ## 2027 staff
 
-The 2027 team carries forward the full 2026 staff. [Meet the staff →](/staff/)
+The 2027 team carries forward the full 2026 staff. [Meet the staff →](../staff/)
 
 <!-- ## Nonprofit note
 

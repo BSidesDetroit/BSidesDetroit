@@ -8,6 +8,7 @@ const staff = Object.values(profiles).map((profile) => profile.frontmatter).sort
   const bLead = b.role?.includes("Co-Lead") ? 0 : 1;
   return aLead - bLead || a.name.localeCompare(b.name);
 });
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="2027 Staff · BSides Detroit" description="Meet the volunteer team behind BSides Detroit 2027.">
@@ -16,7 +17,7 @@ const staff = Object.values(profiles).map((profile) => profile.frontmatter).sort
     <MarkdownPanel label="[ directory // current operators ]">
       <div class="staff-directory">
         {staff.map((member) => (
-          <a class="staff-card" href={`/staff/${member.slug}`}>
+          <a class="staff-card" href={`${base}staff/${member.slug}`}>
             <span class="staff-card-name">{member.name}</span>
             <span class="staff-card-role">{member.role || "Staff member"}</span>
           </a>

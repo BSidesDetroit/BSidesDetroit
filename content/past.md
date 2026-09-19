@@ -6,7 +6,7 @@ Explore the history of BSides Detroit through the details below, reliving the me
 
 ## BSides Detroit 2026
 
-- [Download the 2026 agenda (PDF)](/assets/agendas/BSidesDetroit_2026_Agenda.pdf)
+- [Download the 2026 agenda (PDF)](../assets/agendas/BSidesDetroit_2026_Agenda.pdf)
 - Organizers:
   - Dimitrios Skrettas, co-lead organizer (@dskretta)
   - Adam Frantz, co-lead organizer
@@ -20,7 +20,7 @@ Explore the history of BSides Detroit through the details below, reliving the me
 
 ## BSides Detroit 2025
 
-- [Download the 2025 agenda (PDF)](/assets/agendas/BSidesDetroit_2025_Agenda.pdf)
+- [Download the 2025 agenda (PDF)](../assets/agendas/BSidesDetroit_2025_Agenda.pdf)
 - Organizers:
   - [Adam Frantz](https://www.adam-frantz.com/), lead organizer for 2025
   - Dimitrios Skrettas (@dskretta)
@@ -124,18 +124,18 @@ Explore the history of BSides Detroit through the details below, reliving the me
 These marks trace the changing look and feel of BSides Detroit across the years.
 
 <figure class="logo-figure">
-  <img src="/assets/logos/bsidesdetroit2011_orig.png" alt="BSides Detroit 2011 logo" />
+  <img src="../assets/logos/bsidesdetroit2011_orig.png" alt="BSides Detroit 2011 logo" />
   <figcaption>2011</figcaption>
 </figure>
 <figure class="logo-figure">
-  <img src="/assets/logos/bsidesdetroit2012_orig.jpg" alt="BSides Detroit 2012 logo" />
+  <img src="../assets/logos/bsidesdetroit2012_orig.jpg" alt="BSides Detroit 2012 logo" />
   <figcaption>2012</figcaption>
 </figure>
 <figure class="logo-figure">
-  <img src="/assets/logos/bsidesdetroit2019_orig.png" alt="BSides Detroit 2019 logo" />
+  <img src="../assets/logos/bsidesdetroit2019_orig.png" alt="BSides Detroit 2019 logo" />
   <figcaption>2019</figcaption>
 </figure>
 <figure class="logo-figure">
-  <img src="/assets/logos/bsidesdetroit2025_orig.png" alt="BSides Detroit 2025 logo" />
+  <img src="../assets/logos/bsidesdetroit2025_orig.png" alt="BSides Detroit 2025 logo" />
   <figcaption>2025</figcaption>
 </figure>

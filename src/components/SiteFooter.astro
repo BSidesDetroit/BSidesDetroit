@@ -1,6 +1,8 @@
 ---
 import * as SitePage from "../../content/site.md";
 const { contact, legal } = SitePage.frontmatter.footer;
+const base = import.meta.env.BASE_URL;
+const siteHref = (href) => href.startsWith("/") ? `${base}${href.slice(1)}` : href;
 const year = new Date().getFullYear();
 ---
 
@@ -14,14 +16,14 @@ const year = new Date().getFullYear();
     <section>
       <p class="terminal-label">$ cat contact.txt</p>
       <ul>
-        {contact.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+        {contact.map((item) => <li><a href={siteHref(item.href)}>{item.label}</a></li>)}
       </ul>
     </section>
 
     <section>
       <p class="terminal-label">$ ls /legal</p>
       <ul>
-        {legal.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+        {legal.map((item) => <li><a href={siteHref(item.href)}>{item.label}</a></li>)}
       </ul>
     </section>
   </div>

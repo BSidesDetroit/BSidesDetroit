@@ -30,7 +30,7 @@ BSides Detroit. Hack more. Help people. Secure all.
 
 ## Quick links
 
-- [Join us on Discord](/discord)
-- [Sponsor BSides Detroit](/sponsor)
-- [Read about BSides Detroit](/about)
-- [View past events](/past)
+- [Join us on Discord](./discord)
+- [Sponsor BSides Detroit](./sponsor)
+- [Read about BSides Detroit](./about)
+- [View past events](./past)

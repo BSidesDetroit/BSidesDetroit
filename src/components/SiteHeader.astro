@@ -1,7 +1,7 @@
 ---
 import * as SitePage from "../../content/site.md";
 const navItems = SitePage.frontmatter.nav;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <header class="site-header">

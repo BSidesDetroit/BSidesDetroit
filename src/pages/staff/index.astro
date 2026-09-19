@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MarkdownPanel from "../../components/MarkdownPanel.astro";
+import PageHero from "../../components/PageHero.astro";
+const profiles = import.meta.glob("../../../content/staff/*.md", { eager: true });
+const staff = Object.values(profiles).map((profile) => profile.frontmatter).sort((a, b) => {
+  const aLead = a.role?.includes("Co-Lead") ? 0 : 1;
+  const bLead = b.role?.includes("Co-Lead") ? 0 : 1;
+  return aLead - bLead || a.name.localeCompare(b.name);
+});
+---
+
+<BaseLayout title="2027 Staff · BSides Detroit" description="Meet the volunteer team behind BSides Detroit 2027.">
+  <div class="page-wrap">
+    <PageHero eyebrow="ls /staff/2027" title="2027 Staff" summary="The volunteers building the next BSides Detroit. Read their profiles and connect with the people behind the event." />
+    <MarkdownPanel label="[ directory // current operators ]">
+      <div class="staff-directory">
+        {staff.map((member) => (
+          <a class="staff-card" href={`/staff/${member.slug}`}>
+            <span class="staff-card-name">{member.name}</span>
+            <span class="staff-card-role">{member.role || "Staff member"}</span>
+          </a>
+        ))}
+      </div>
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

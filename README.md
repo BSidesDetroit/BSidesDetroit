@@ -12,9 +12,9 @@ content/
   about.md
   past.md
   code-of-conduct.md
-  hello.md
+  discord.md
+  site.md
   sponsor.md
-  todo.md
 ```
 
 The `src/` folder controls layout and styling. Most team members should not need to edit it.
@@ -84,7 +84,7 @@ docker compose down
 Development mode with live reload:
 
 ```bash
-docker compose --profile dev up
+docker compose --profile dev up dev
 ```
 
 This runs `npm ci` and `npm run dev` inside the Node 26 container, not on your host machine.

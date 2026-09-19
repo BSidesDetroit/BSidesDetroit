@@ -1,10 +1,6 @@
 ---
-const stats = [
-  { label: "status", value: "2026 successful" },
-  { label: "sector", value: "detroit" },
-  { label: "crew", value: "volunteer" },
-  { label: "next signal", value: "2027 tbd" },
-];
+import * as HomePage from "../../content/home.md";
+const stats = HomePage.frontmatter.stats;
 ---
 
 <dl class="stat-strip">

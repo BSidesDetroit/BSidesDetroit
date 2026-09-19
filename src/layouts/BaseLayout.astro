@@ -31,5 +31,54 @@ const {
       <slot />
     </main>
     <SiteFooter />
+
+    <div class="image-modal" data-image-modal hidden aria-hidden="true">
+      <button class="image-modal-close" type="button" data-image-modal-close aria-label="Close image">×</button>
+      <img data-image-modal-image alt="" />
+    </div>
+
+    <script>
+      const modal = document.querySelector("[data-image-modal]");
+      const modalImage = document.querySelector("[data-image-modal-image]");
+      const closeButton = document.querySelector("[data-image-modal-close]");
+
+      const closeModal = () => {
+        modal?.setAttribute("hidden", "");
+        modal?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      };
+
+      document.querySelectorAll(".markdown-flow img").forEach((image) => {
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", `View ${image.alt || "image"} full size`);
+
+        const openModal = () => {
+          if (!modal || !modalImage) return;
+          modalImage.src = image.currentSrc || image.src;
+          modalImage.alt = image.alt;
+          modal.removeAttribute("hidden");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+          closeButton?.focus();
+        };
+
+        image.addEventListener("click", openModal);
+        image.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openModal();
+          }
+        });
+      });
+
+      closeButton?.addEventListener("click", closeModal);
+      modal?.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal?.hasAttribute("hidden")) closeModal();
+      });
+    </script>
   </body>
 </html>

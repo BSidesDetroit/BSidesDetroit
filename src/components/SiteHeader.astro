@@ -1,10 +1,6 @@
 ---
-const navItems = [
-  { href: "/about", label: "ABOUT" },
-  { href: "/past", label: "PAST" },
-  { href: "/sponsor", label: "SPONSORS" },
-  { href: "/hello", label: "HELLO" },
-];
+import * as SitePage from "../../content/site.md";
+const navItems = SitePage.frontmatter.nav;
 ---
 
 <header class="site-header">

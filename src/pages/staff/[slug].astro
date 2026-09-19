@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MarkdownPanel from "../../components/MarkdownPanel.astro";
+import PageHero from "../../components/PageHero.astro";
+export function getStaticPaths() {
+  const profiles = import.meta.glob("../../../content/staff/*.md", { eager: true });
+  return Object.values(profiles).map((profile) => ({ params: { slug: profile.frontmatter.slug }, props: { profile } }));
+}
+
+const { profile } = Astro.props;
+const { Content } = profile;
+const { name, role, image, pronouns, links } = profile.frontmatter;
+---
+
+<BaseLayout title={`${name} · BSides Detroit`} description={`Meet ${name}, a member of the BSides Detroit 2027 staff.`}>
+  <div class="page-wrap">
+    <PageHero eyebrow="cat /staff/2027" title={name} summary={role || "BSides Detroit 2027 staff"} />
+    <MarkdownPanel label="[ profile // community operator ]">
+      <div class="staff-profile">
+        {image && <img class="staff-profile-image" src={image} alt={`${name} portrait`} />}
+        <div class="staff-profile-copy">
+          {pronouns && <p class="staff-pronouns">({pronouns})</p>}
+          <Content />
+          <p class="staff-links">{links?.map((link) => <a href={link.url} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</p>
+          <p><a href="/staff/">← Back to staff directory</a></p>
+        </div>
+      </div>
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

@@ -1,21 +1,14 @@
 ---
-const target = "/hello";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DiscordContent from "../../content/discord.md";
+import MarkdownPanel from "../components/MarkdownPanel.astro";
+import PageHero from "../components/PageHero.astro";
 ---
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
-    <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href={target} />
-    <title>Redirecting to Discord · BSides Detroit</title>
-    <script is:inline>
-      window.location.replace("/hello");
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to <a href="/hello">Discord and contact</a>.</p>
-  </body>
-</html>
+<BaseLayout title="Discord · BSides Detroit" description="Join the BSides Detroit community on Discord.">
+  <div class="page-wrap">
+    <PageHero eyebrow="connect / discord" title="Join Discord" summary="Stay connected with the BSides Detroit community between events." />
+    <MarkdownPanel label="[ uplink // community channel ]">
+      <div class="discord-callout"><DiscordContent /></div>
+    </MarkdownPanel>
+  </div>
+</BaseLayout>

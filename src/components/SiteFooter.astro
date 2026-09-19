@@ -1,4 +1,6 @@
 ---
+import * as SitePage from "../../content/site.md";
+const { contact, legal } = SitePage.frontmatter.footer;
 const year = new Date().getFullYear();
 ---
 
@@ -12,15 +14,14 @@ const year = new Date().getFullYear();
     <section>
       <p class="terminal-label">$ cat contact.txt</p>
       <ul>
-        <li><a href="/hello">Discord and contact</a></li>
-        <li><a href="/sponsor">Sponsor BSides Detroit</a></li>
+        {contact.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
       </ul>
     </section>
 
     <section>
       <p class="terminal-label">$ ls /legal</p>
       <ul>
-        <li><a href="/code-of-conduct">Code of Conduct</a></li>
+        {legal.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
       </ul>
     </section>
   </div>

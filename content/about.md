@@ -14,9 +14,9 @@ The work gets stronger when knowledge moves sideways through the community, not 
 
 ## Why Detroit?
 
-Detroit knows how to build, repair, improvise, and keep going. That history matters in technology. The city has deep roots in engineering, manufacturing, logistics, education, healthcare, mobility, art, and community organizing. Security touches all of it.
+Detroit hustles harder. Detroit knows how to build, repair, improvise, and keep going. That history matters in technology. The city has deep roots in engineering, manufacturing, logistics, education, healthcare, mobility, art, and community organizing. Security touches all of it.
 
-BSides Detroit exists because this region has people doing real work in real systems, and those people deserve a place to compare notes, sharpen skills, mentor others, and build trust.
+BSides Detroit exists because we do real work in real systems, and we deserve a place to compare notes, sharpen skills, mentor others, and build trust.
 
 ## Operating principles
 
@@ -25,6 +25,21 @@ BSides Detroit exists because this region has people doing real work in real sys
 3. Accessible by design.
 4. Respectful by default.
 5. Built by volunteers who care about Detroit.
+
+## Stay connected
+
+### Discord
+
+[Join the BSides Detroit community](/discord) for announcements, conversation, volunteering, speaker updates, and event planning.
+
+### Contact
+
+- Email: [info@bsidesdetroit.org](mailto:info@bsidesdetroit.org)
+- Social: [X @BSidesDetroit](https://x.com/BSidesDetroit)
+
+## 2027 staff
+
+The 2027 team carries forward the full 2026 staff. [Meet the staff →](/staff/)
 
 <!-- ## Nonprofit note
 

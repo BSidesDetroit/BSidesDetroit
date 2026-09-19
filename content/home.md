@@ -1,3 +1,21 @@
+---
+signal: holding pattern · Detroit, MI · next signal TBD
+kicker: // community security from the motor city
+tagline: BSides Detroit. Hack more. Help people. Secure all.
+stats:
+  - { label: status, value: 2026 successful }
+  - { label: sector, value: detroit }
+  - { label: crew, value: volunteer }
+  - { label: next signal, value: 2027 tbd }
+mission: |
+  launch_window = "2027_launch_window"
+  ground_station = "Detroit, MI"
+  ticket = "closed"
+  cfp_status = "closed"
+  volunteer_status = "closed for now"
+  theme = "blue / yellow / black / glitch"
+---
+
 BSides Detroit is back on the wire.
 
 After the restart, 2025 and 2026 are officially in the books. What began as getting the conference moving again has turned back into a rhythm: people showing up, sharing hard lessons, helping each other, and making the Detroit security community stronger.
@@ -12,7 +30,7 @@ BSides Detroit. Hack more. Help people. Secure all.
 
 ## Quick links
 
-- [Say hello on Discord](/hello)
+- [Join us on Discord](/discord)
 - [Sponsor BSides Detroit](/sponsor)
 - [Read about BSides Detroit](/about)
 - [View past events](/past)

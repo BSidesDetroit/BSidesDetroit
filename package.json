@@ -17,6 +17,6 @@
     "node": ">=26 <27"
   },
   "devDependencies": {
-    "astro": "7.3.2"
+    "astro": "7.3.3"
   }
 }
